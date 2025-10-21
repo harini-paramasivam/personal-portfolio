@@ -19,8 +19,8 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Final-year Information Technology undergraduate specializing in Analytics, Visualization, and Machine Learning.
-            I build data-driven solutions, interactive dashboards, and visualizations to solve real-world problems.
+            specializing in Analytics, Visualization, and Machine Learning.
+            also build data-driven solutions, interactive dashboards, and visualizations to solve real-world problems.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">

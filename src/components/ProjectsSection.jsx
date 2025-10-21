@@ -1,12 +1,14 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
+// Import images from public folder
+// Make sure these images are in public/projects/
 const projects = [
   {
     id: 1,
     title: "Cryptocurrency Market Analyzer",
     description:
       "Built interactive dashboards visualizing crypto trends, prices, market cap, and volume using Python, Streamlit, and Plotly.",
-    image: "/projects/crypto_dashboard.png", // Replace with your image path
+    image: "/projects/crypto_dashboard.png", // move image to public/projects/
     tags: ["Python", "Streamlit", "Plotly", "CoinGecko API"],
     demoUrl: "https://harini-paramasivam-ogcryptocurrency-analyser-project-app-1wk177.streamlit.app/",
     githubUrl: "https://github.com/harini-paramasivam/CryptoMarketAnalyzer",
@@ -16,7 +18,7 @@ const projects = [
     title: "IRCTC Real-Time Train Monitoring Dashboard",
     description:
       "Designed dynamic filters for train status, zones, delays, and occupancy. Visualized delays and operational metrics using Python, Plotly, Matplotlib, Pandas, and Seaborn.",
-    image: "/projects/irctc_dashboard.png", // Replace with your image path
+    image: "/projects/irctc_dashboard.png", // move image to public/projects/
     tags: ["Python", "Plotly", "Matplotlib", "Pandas", "Seaborn"],
     demoUrl: "https://harini-paramasivam-irctc-project-irctc-dashboard-hcva2c.streamlit.app/",
     githubUrl: "https://github.com/harini-paramasivam/IRCTC_TrainDashboard",
@@ -28,7 +30,7 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Featured <span className="text-primary"> Projects </span>
+          Featured <span className="text-primary">Projects</span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -36,9 +38,9 @@ export const ProjectsSection = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {projects.map((project) => (
             <div
-              key={key}
+              key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
@@ -65,11 +67,13 @@ export const ProjectsSection = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
+
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3">
                     <a
                       href={project.demoUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <ExternalLink size={20} />
@@ -77,6 +81,7 @@ export const ProjectsSection = () => {
                     <a
                       href={project.githubUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <Github size={20} />
@@ -92,6 +97,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
+            rel="noopener noreferrer"
             href="https://github.com/harini-paramasivam"
           >
             Check My Github <ArrowRight size={16} />
