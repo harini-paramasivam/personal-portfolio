@@ -1,3 +1,5 @@
+// src/pages/Home.jsx
+
 import { Navbar } from "../components/Navbar";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { StarBackground } from "@/components/StarBackground";
@@ -8,7 +10,7 @@ import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 
-// ✅ Import your resume PDF
+// Import your resume PDF
 import resumePDF from "../assets/Harini.pdf";
 
 export const Home = () => {
@@ -21,9 +23,10 @@ export const Home = () => {
 
       {/* Navbar */}
       <Navbar />
+
       {/* Main Content */}
       <main>
-        {/* ✅ Pass resume link to HeroSection */}
+        {/* Pass resume link to HeroSection */}
         <HeroSection resumeLink={resumePDF} />
         <AboutSection />
         <SkillsSection />
